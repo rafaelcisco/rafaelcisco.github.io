@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ronit Jha - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="profile-pic img">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Ronit Jha" />
+        </div>
         <h1>Ronit Jha</h1>
+        <p class="subtitle">AI/ML Student</p>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -18,33 +24,110 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Ronit, a developer passionate about [your skills/fields].</p>
+        <p>Hello! I'm Ronit, a developer passionate about building modern, user-friendly web experiences. I specialize in front-end development, UI/UX design, and enjoy working with the latest web technologies.</p>
+        <ul class="skills">
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="school">
+            <h3>Bachelor of Science- Indiana University</h3>
+            <p>I am currently pursuing a degree in Computer Science with a focus on Artificial Intelligence and Machine Learning.</p>
+            <ul class="skills">
+                <li>May 2027</li>
+                <li>GPA: 3.86/4.0</li>
+                <li>Minor: Business</li>
+            </ul>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Brief description of project 1.</p>
-            <a href="#">View Project</a>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>Heart Disease Prediction</h3>
+                <p>A machine learning project to predict heart disease using various health metrics.</p>
+                <a href="projects/heart_disease_project.html" class="btn">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Agentic Fire Simulator</h3>
+                <p>put info</p>
+                <a href="projects/agentic_fire_simulator.html" class="btn">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Task Manager</h3>
+                <p>A simple task manager built with React and local storage.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Brief description of project 2.</p>
-            <a href="#">View Project</a>
-        </div>
-        <!-- Add more projects as needed -->
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:example@mail.com">example@mail.com</a></p>
-        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-        <p>GitHub: <a href="#">Your GitHub</a></p>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div id="formMessage"></div>
+        <div class="contact-links">
+            <p>Email: <a href="mailto:jhar@iu.edu">jhar@iu.edu</a></p>
+            <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+            <p>GitHub: <a href="#">Your GitHub</a></p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Ronit Jha</p>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        function revealSections() {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSections);
+        revealSections();
+        });
+    </script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const messageDiv = document.getElementById('formMessage');
+            try {
+                const response = await fetch('https://formspree.io/f/mrbaoydb', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    form.reset();
+                    messageDiv.textContent = "Thank you! Your message has been sent.";
+                    messageDiv.style.color = "#4e54c8";
+                } else {
+                    messageDiv.textContent = "Oops! There was a problem submitting your form.";
+                    messageDiv.style.color = "red";
+                }
+            } catch (error) {
+                messageDiv.textContent = "Oops! There was a problem submitting your form.";
+                messageDiv.style.color = "red";
+            }
+        });
+    </script>
 </body>
 </html>

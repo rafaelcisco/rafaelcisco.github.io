@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Project - Ronit Jha</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html#projects" class="back-btn">&larr; Back to Projects</a>
+        <div class="profile-pic">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Ronit Jha" />
+        </div>
+        <h1>Ronit Jha</h1>
+        <p class="subtitle">AI/ML Student</p>
+        <nav>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <h2>Heart Disease Prediction</h2>
+        <div class="project">
+            <h3>Overview</h3>
+            <p>
+                This project uses machine learning algorithms to predict the likelihood of heart disease based on various health metrics. The goal is to assist healthcare professionals in early diagnosis and risk assessment.
+            </p>
+            <ul class="skills">
+                <li>Python</li>
+                <li>Scikit-learn</li>
+                <li>Pandas</li>
+                <li>Data Visualization</li>
+                <li>Machine Learning</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Data preprocessing and cleaning</li>
+            <li>Exploratory data analysis</li>
+            <li>Model training and evaluation (Logistic Regression, Random Forest, etc.)</li>
+            <li>Performance metrics visualization</li>
+            <li>User-friendly interface for predictions</li>
+        </ul>
+    </section>
+
+    <section id="links">
+        <h2>Links</h2>
+        <div class="contact-links">
+            <p>GitHub Repository: <a href="#">Project GitHub</a></p>
+            <p>Back to <a href="../index.html#projects">All Projects</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ronit Jha</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        function revealSections() {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSections);
+        revealSections();
+    });
+    </script>
+</body>
+</html>

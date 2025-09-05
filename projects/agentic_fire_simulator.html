@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Fire Simulator Project - Ronit Jha</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <a href="../index.html#projects" class="back-btn">&larr; Back to Projects</a>
+        <div class="profile-pic">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Ronit Jha" />
+        </div>
+        <h1>Ronit Jha</h1>
+        <p class="subtitle">AI/ML Student</p>
+        <nav>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <h2>Agentic Fire Simulator</h2>
+        <div class="project">
+            <h3>Overview</h3>
+            <p>
+                The Agentic Fire Simulator is a computational model designed to simulate the spread and control of fire using agent-based techniques. It helps in understanding fire dynamics and testing various intervention strategies.
+            </p>
+            <ul class="skills">
+                <li>Python</li>
+                <li>Simulation</li>
+                <li>Agent-Based Modeling</li>
+                <li>Visualization</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Customizable environment and parameters</li>
+            <li>Visualization of fire spread</li>
+            <li>Agent-based control strategies</li>
+            <li>Performance analysis and reporting</li>
+        </ul>
+    </section>
+
+    <section id="links">
+        <h2>Links</h2>
+        <div class="contact-links">
+            <p>GitHub Repository: <a href="#">Project GitHub</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ronit Jha</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        function revealSections() {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSections);
+        });
+    </script>
+</body>
+</html>
