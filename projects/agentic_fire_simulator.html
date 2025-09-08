@@ -3,74 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentic Fire Simulator Project - Ronit Jha</title>
+    <title>Heart Disease Prediction Project - Ronit Jha</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-    
 </head>
 <body>
     <header>
-        <a href="../index.html#projects" class="back-btn">&larr; Back to Projects</a>
+        <a href="../index.html#projects" class="back-btn">&larr; Back</a>
         <div class="profile-pic">
-            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Ronit Jha" />
+            <img src="../pictures/IMG_9687.jpeg" alt="Ronit Jha" />
         </div>
         <h1>Ronit Jha</h1>
         <p class="subtitle">AI/ML Student</p>
         <nav>
             <a href="../index.html#about">About</a>
             <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
             <a href="../index.html#contact">Contact</a>
         </nav>
     </header>
 
-    <section id="project-details">
-        <h2>Agentic Fire Simulator</h2>
-        <div class="project">
-            <h3>Overview</h3>
+    <main class="project-layout">
+        <section id="project-overview" class="section-container">
+            <h2>Agentic Fire Simulator</h2>
             <p>
-                The Agentic Fire Simulator is a computational model designed to simulate the spread and control of fire using agent-based techniques. It helps in understanding fire dynamics and testing various intervention strategies.
+                Built a grid-based firefighting simulation using Python and Pygame, 
+                integrating reinforcement learning with cooperative agents (water and shovel) 
+                to control spreading wildfires. Designed a shared Q-table system enabling agents 
+                to learn collaboratively, implemented real-time visualization, and tracked 
+                performance metrics across episodes.
             </p>
-            <ul class="skills">
-                <li>Python</li>
-                <li>Simulation</li>
-                <li>Agent-Based Modeling</li>
-                <li>Visualization</li>
-            </ul>
-        </div>
-    </section>
+            
+            <div class="highlight-box">
+                <h4>Technologies Used</h4>
+                <ul class="skills">
+                    <li>Python</li>
+                    <li>NumPy</li>
+                    <li>Pygame</li>
+                    <li>Q-learning</li>
+                    <li>Multi-Agent System</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Customizable environment and parameters</li>
-            <li>Visualization of fire spread</li>
-            <li>Agent-based control strategies</li>
-            <li>Performance analysis and reporting</li>
-        </ul>
-    </section>
+        <section id="ann-section" class="section-container">
+            <div class="highlight-box">
+                <h2>Pygame Simulation</h2>
+            </div>
+            <img src="../pictures/Screenshot 2025-09-07 at 8.55.34 PM.png" alt="Pygame simulation picture" class="project-image">
+            
 
-    <section id="links">
-        <h2>Links</h2>
-        <div class="contact-links">
-            <p>GitHub Repository: <a href="#">Project GitHub</a></p>
-        </div>
-    </section>
+            <div class="feature-list">
+                <section aria-labelledby="title-fire-sim">
+                    <h2 id="title-fire-sim">Cooperative RL Fire Simulation — Project Rundown</h2>
+                  
+                    <h3>Objective</h3>
+                    <ul>
+                      <li>Simulate wildfire spread and management using <strong>cooperative reinforcement learning</strong> with multiple agents.</li>
+                    </ul>
+                  
+                    <h3>Core Components</h3>
+                    <ul>
+                      <li><strong>Environment (<code>model.py</code>)</strong> — Grid world with trees, fire, burned areas, and trenches; handles fire spread and rules.</li>
+                      <li><strong>Agents (<code>agents.py</code>)</strong>
+                        <ul>
+                          <li><em>FirefighterWater</em>: extinguishes fires.</li>
+                          <li><em>FireFighterShovel</em>: digs trenches to block fire spread.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Q-learning System</strong> — Agents share a <strong>Q-table</strong> to learn collaboratively.</li>
+                    </ul>
+                  
+                    <h3>Code Flow</h3>
+                    <ul>
+                      <li><strong>Initialization (<code>create_simulation</code>)</strong>
+                        <ul>
+                          <li>Builds environment with adjustable tree density.</li>
+                          <li>Sets up a shared Q-table (fresh or loaded from prior runs).</li>
+                          <li>Spawns three agents at strategic starting positions.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Main Loop (<code>main</code>)</strong>
+                        <ul>
+                          <li>Handles user input (quit/reset).</li>
+                          <li>Advances environment steps (fire spreads, agents act).</li>
+                          <li>Renders grid, agents, and stats in real time via <strong>Pygame</strong>.</li>
+                          <li>Resets episode if the fire engulfs the map, carrying over the learned Q-table.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  
+                    <h3>Visualization &amp; Debugging</h3>
+                    <ul>
+                      <li>Color-coded grid for fire, trees, trenches, and agents; shovel agent has a highlighted digging radius.</li>
+                      <li>On-screen stats: episode, active fires, trees remaining, trenches dug, extinguished fires, Q-table size.</li>
+                      <li>Optional console debug: local grid snippets near agents.</li>
+                    </ul>
+                  
+                    <h3>Key Outcomes</h3>
+                    <ul>
+                      <li>Demonstrates <strong>multi-agent cooperation</strong> to control wildfire spread.</li>
+                      <li>Provides a <strong>visual, interactive simulation</strong> of reinforcement learning.</li>
+                      <li>Tracks <strong>performance metrics</strong> across episodes to monitor learning progress.</li>
+                    </ul>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <p>&copy; 2025 Ronit Jha</p>
     </footer>
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section');
-        function revealSections() {
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-        window.addEventListener('scroll', revealSections);
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section-container');
+            
+            function revealSections() {
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        section.classList.add('visible');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', revealSections);
+            revealSections();
         });
     </script>
 </body>

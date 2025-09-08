@@ -10,123 +10,188 @@
 </head>
 <body>
     <header>
-        <div class="profile-pic img">
-            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Ronit Jha" />
+        <div class="profile-pic">
+            <img src="pictures/IMG_9687.jpeg" alt="Ronit Jha" />
         </div>
         <h1>Ronit Jha</h1>
         <p class="subtitle">AI/ML Student</p>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Ronit, a developer passionate about building modern, user-friendly web experiences. I specialize in front-end development, UI/UX design, and enjoy working with the latest web technologies.</p>
-        <ul class="skills">
-            <li>Python</li>
-            <li>Java</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Artificial Intelligence</li>
-            <li>Machine Learning</li>
-        </ul>
-    </section>
+    <main class="main-layout">
+        <section id="about" class="section-container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>Hi, I’m Ronit Jha! I'm a developer with a strong focus on machine learning, data analysis, and software development. I specialize in applying analytical and technical skills to build efficient, data-driven solutions that address complex problems.
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="school">
-            <h3>Bachelor of Science- Indiana University</h3>
-            <p>I am currently pursuing a degree in Computer Science with a focus on Artificial Intelligence and Machine Learning.</p>
-            <ul class="skills">
-                <li>May 2027</li>
-                <li>GPA: 3.86/4.0</li>
-                <li>Minor: Business</li>
-            </ul>
-        </div>
-    </section>
+                <p>My background includes working with algorithms, simulations, and predictive modeling, with an emphasis on delivering accurate insights and practical applications. I bring a balance of technical expertise and problem-solving ability, aiming to create solutions that are both impactful and scalable.</p>
+                    
+                <p>I am motivated by continuous learning and thrive in environments where I can apply emerging technologies to real-world challenges while contributing to innovative projects.</p>
+                <ul class="skills">
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>HTML/CSS</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project">
-                <h3>Heart Disease Prediction</h3>
-                <p>A machine learning project to predict heart disease using various health metrics.</p>
-                <a href="projects/heart_disease_project.html" class="btn">View Project</a>
+        <section id="education" class="section-container">
+            <div class="education-content">
+                <h2>Education</h2>
+                <h3>Bachelor of Science - Indiana University</h3>
+                <p>I am currently pursuing a degree in Computer Science with a focus on Artificial Intelligence and Machine Learning.</p>
+                <ul class="skills">
+                    <li>May 2027</li>
+                    <li>GPA: 3.86/4.0</li>
+                    <li>Minor: Business</li>
+                </ul>
             </div>
-            <div class="project">
-                <h3>Agentic Fire Simulator</h3>
-                <p>put info</p>
-                <a href="projects/agentic_fire_simulator.html" class="btn">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Task Manager</h3>
-                <p>A simple task manager built with React and local storage.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form class="contact-form" id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <div id="formMessage"></div>
-        <div class="contact-links">
-            <p>Email: <a href="mailto:jhar@iu.edu">jhar@iu.edu</a></p>
-            <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-            <p>GitHub: <a href="#">Your GitHub</a></p>
-        </div>
-    </section>
+        <section id="experience" class="section-container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Information Technology Intern</h3>
+                <p class="company">Cummins Inc.</p>
+                <p class="duration">Summer 2025</p>
+                <ul>
+                    <li>
+                        Developed a Python-based software solution to capture and transmit video streams to a third party AI company for further processing.
+                    </li>
+                    <li>
+                        Developed and presented a proposal for an AI-powered safety assistant aimed at enhancing safety within plants and warehouses.
+                    </li>
+                    <li>
+                        Assisted in the automation of KPI tracking for 6+ sites to support leadership with more efficient performance monitoring.
+                    </li>
+                </ul>
+                    
+            </div>
+            <div class="experience-item">
+                <h3>Research Assistant</h3>
+                <p class="company"> Indiana University</p>
+                <p class="duration"> Fall 2025 - Present</p>
+                <ul>
+                    <li>Working on developing AI/NLP embeddings that can serve classical and quantum computing environments for AI.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="section-container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Heart Disease Prediction</h3>
+                    <p>A machine learning project to predict heart disease using various health metrics.</p>
+                    <a href="projects/heart_disease_project.html" class="btn">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Agentic Fire Simulator</h3>
+                    <p>A simulation project to model fire spread using agent-based techniques.</p>
+                    <a href="projects/agentic_fire_simulator.html" class="btn">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="section-container">
+            <h2>Hobbies & Interests</h2>
+            <div class="hobbies-content">
+                <h3>Piano</h3>
+                <p>In my free time, I enjoy playing classical piano. Some of my favorite repitoire comes from Rachmaninoff and Liszt.</p>
+                <h3>Tennis/Racket Sports</h3>
+                <p>I love playing tennis and other racket sports, and often participate in local tournaments and matches with friends.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section-container">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="https://formspree.io/f/mrbaoydb" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" required></textarea>
+
+                <!-- Honeypot field (hidden) -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+
+            <p id="thank-you">
+                Thanks! Your message has been sent.
+            </p>
+
+            <div class="contact-links">
+                <p>Email: <a href="mailto:jhar@iu.edu">jhar@iu.edu</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/ronitjha05/">LinkedIn</a></p>
+                <p>GitHub: <a href="https://github.com/rafaelcisco">GitHub</a></p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Ronit Jha</p>
     </footer>
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section');
-        function revealSections() {
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-        window.addEventListener('scroll', revealSections);
-        revealSections();
-        });
-    </script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const data = new FormData(form);
-            const messageDiv = document.getElementById('formMessage');
-            try {
-                const response = await fetch('https://formspree.io/f/mrbaoydb', {
-                    method: 'POST',
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.section-container');
+
+            function revealSections() {
+                sections.forEach((section) => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (sectionTop < windowHeight - 100) {
+                        section.classList.add('visible');
+                    }
                 });
-                if (response.ok) {
-                    form.reset();
-                    messageDiv.textContent = "Thank you! Your message has been sent.";
-                    messageDiv.style.color = "#4e54c8";
-                } else {
-                    messageDiv.textContent = "Oops! There was a problem submitting your form.";
-                    messageDiv.style.color = "red";
-                }
-            } catch (error) {
-                messageDiv.textContent = "Oops! There was a problem submitting your form.";
-                messageDiv.style.color = "red";
             }
+
+            window.addEventListener('scroll', revealSections);
+            revealSections();
+        });
+
+        // Contact form handling
+        const form = document.getElementById("contact-form");
+        const thankYouMessage = document.getElementById("thank-you");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    form.style.display = "none";
+                    thankYouMessage.style.display = "block";
+                } else {
+                    alert("Oops! There was a problem submitting your form.");
+                }
+            })
+            .catch(error => {
+                alert("Oops! There was a problem submitting your form.");
+                console.error(error);
+            });
         });
     </script>
 </body>

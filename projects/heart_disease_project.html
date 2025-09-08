@@ -9,72 +9,151 @@
 </head>
 <body>
     <header>
-        <a href="../index.html#projects" class="back-btn">&larr; Back to Projects</a>
+        <a href="../index.html#projects" class="back-btn">&larr; Back</a>
         <div class="profile-pic">
-            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Ronit Jha" />
+            <img src="../pictures/IMG_9687.jpeg" alt="Ronit Jha" />
         </div>
         <h1>Ronit Jha</h1>
         <p class="subtitle">AI/ML Student</p>
         <nav>
             <a href="../index.html#about">About</a>
             <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
             <a href="../index.html#contact">Contact</a>
         </nav>
     </header>
 
-    <section id="project-details">
-        <h2>Heart Disease Prediction</h2>
-        <div class="project">
-            <h3>Overview</h3>
+    <main class="project-layout">
+        <section id="project-overview" class="section-container">
+            <h2>Heart Disease Prediction</h2>
             <p>
-                This project uses machine learning algorithms to predict the likelihood of heart disease based on various health metrics. The goal is to assist healthcare professionals in early diagnosis and risk assessment.
+                Heart disease is a leading cause of death worldwide, 
+                making early detection and accurate prediction crucial. 
+                This project analyzes the performance of four machine 
+                learning algorithms—Decision Trees, K-Nearest Neighbors, 
+                Artificial Neural Networks, and Hopfield Networks—on a heart 
+                disease dataset. By comparing accuracy, efficiency, and interpretability, 
+                the project highlights the most effective approaches for 
+                supporting early diagnosis and personalized treatment in healthcare.
             </p>
-            <ul class="skills">
-                <li>Python</li>
-                <li>Scikit-learn</li>
-                <li>Pandas</li>
-                <li>Data Visualization</li>
-                <li>Machine Learning</li>
-            </ul>
-        </div>
-    </section>
+            
+            <div class="highlight-box">
+                <h4>Technologies Used</h4>
+                <ul class="skills">
+                    <li>Python</li>
+                    <li>Scikit-learn</li>
+                    <li>Pandas</li>
+                    <li>NumPy</li>
+                    <li>Matplotlib</li>
+                    <li>Data Visualization</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Data preprocessing and cleaning</li>
-            <li>Exploratory data analysis</li>
-            <li>Model training and evaluation (Logistic Regression, Random Forest, etc.)</li>
-            <li>Performance metrics visualization</li>
-            <li>User-friendly interface for predictions</li>
-        </ul>
-    </section>
+        <section id="ann-section" class="section-container">
+            <div class="highlight-box">
+                <h2>Artificial Nerual Networks</h2>
+                <p><strong>98%</strong> Overall Accuracy</p>
+            </div>
+            <img src="../pictures/Untitled.jpg" alt="Artificial Neural Network Diagram" class="project-image">
+            
 
-    <section id="links">
-        <h2>Links</h2>
-        <div class="contact-links">
-            <p>GitHub Repository: <a href="#">Project GitHub</a></p>
-            <p>Back to <a href="../index.html#projects">All Projects</a></p>
-        </div>
-    </section>
+            <div class="feature-list">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Used Multilayer Perceptron (MLP) classifier from scikit-learn.</li>
+                    <li>MLP structure: input layer (features), two hidden layers (30 neurons each), output layer (predictions).</li>
+                    <li>Key mechanisms: 
+                      <ul>
+                        <li>Forward propagation — data moves through layers with weighted sums and activation functions (ReLU).</li>
+                        <li>Loss calculation and backpropagation — compute gradients to update weights and biases.</li>
+                        <li>Optimization — Adam optimizer with learning rate 0.001.</li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="knn-section" class="section-container">
+            <div class="highlight-box">
+                <h2>K-Nearest Neighbors</h2>
+                <p><strong>83.4%</strong> Overall Accuracy</p>
+            </div>
+            <img src="../pictures/Screenshot 2025-04-15 at 11.56.29 PM.png" alt="KNN Correlation Heatmap" class="project-image">
+            
+            
+
+            <div class="feature-list">
+                <h4>Implementation Details:</h4>
+                <ul>
+                    <li>Implemented K-Nearest Neighbors (KNN) for heart disease prediction.</li>
+                    <li>Used Matplotlib and Seaborn to create a correlation heatmap for visualizing relationships between features and the target.</li>
+                    <li>Identified influential attributes:
+                      <ul>
+                        <li>Positive correlation — chest pain (cp), maximum heart rate (thalach).</li>
+                        <li>Negative correlation — ST depression (oldpeak), exercise-induced angina (exang).</li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="decision-section" class="section-container">
+            <div class="highlight-box">
+                <h2>Decision Trees</h2>
+                <p><strong>87%</strong> Overall Accuracy</p>
+            </div>
+            <img src="../pictures/DecisionTree_Results.png" alt="Decision Tree Visualization" class="project-image">
+
+            <div class="feature-list">
+                <h4>Technical Approach:</h4>
+                <ul>
+                    <li>Implemented a custom Decision Tree model using pandas, NumPy, and matplotlib only.</li>
+                    <li>Selected features at each node by minimizing weighted Gini Impurity.</li>
+                    <li>Recursively split nodes until purity or a maximum depth of 4 (to prevent overfitting).</li>
+                    <li>Visualized the resulting tree using matplotlib.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="links-section" class="section-container">
+            <h2>Project Resources</h2>
+            <div class="contact-links">
+                <p>Research Paper: <a href="../links/B351_Final_Paper.pdf" style="color: white"; class="btn">View PDF</a></p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Project Summary</h4>
+                <p>When comparing the accuracy of
+                    each algorithm, we found that ANN is the most accurate, with an accuracy of
+                    98%. In the future, we can achieve better/ more accurate results by testing
+                    on a larger dataset, which will make our models more applicable to real-world
+                    patient scenarios.</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Ronit Jha</p>
     </footer>
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section');
-        function revealSections() {
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-        window.addEventListener('scroll', revealSections);
-        revealSections();
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section-container');
+            
+            function revealSections() {
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        section.classList.add('visible');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', revealSections);
+            revealSections();
+        });
     </script>
 </body>
 </html>
