@@ -70,10 +70,11 @@ header nav a:hover::after {
 }
 
 /* Back Button */
-.back-btn {
-    position: absolute;
-    left: 2rem;
-    top: 2rem;
+
+.back-btn-bottom {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
     background: linear-gradient(135deg, #41396a 0%, #9397e7 100%);
     color: #fff;
     border: none;
@@ -87,7 +88,7 @@ header nav a:hover::after {
     z-index: 10;
 }
 
-.back-btn:hover {
+.back-btn-bottom:hover {
     background: linear-gradient(90deg, #8f94fb 60%, #41396a 100%);
     box-shadow: 0 4px 16px rgba(78, 84, 200, 0.18);
     transform: scale(1.05);
@@ -103,6 +104,7 @@ header nav a:hover::after {
         "education education"
         "experience experience"
         "projects projects"
+        "hobbies hobbies"
         "contact contact";
     gap: 2rem;
     max-width: 1200px;
