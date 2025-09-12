@@ -107,7 +107,7 @@ header nav a:hover::after {
         "hobbies hobbies"
         "contact contact";
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 2rem auto;
     padding: 1rem;
 }
@@ -120,7 +120,7 @@ header nav a:hover::after {
             "experience projects"
             "experience hobbies"
             "contact contact";
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 3fr 2fr;
     }
 }
 
@@ -133,7 +133,7 @@ header nav a:hover::after {
         "method2 method3"
         "links links";
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 2rem auto;
     padding: 1rem;
 }
@@ -296,7 +296,17 @@ header nav a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+
+    /* scrolling */
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* required: fix the container height */
+    max-height: 535px;
     margin-top: 1rem;
+
+    box-sizing: content-box;   /* ensure padding doesn’t shrink space */
+    padding-right: 0.5rem;
 }
 
 .project {
